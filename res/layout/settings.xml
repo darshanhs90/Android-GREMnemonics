@@ -1,0 +1,290 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlanchedAlmond"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".Settings" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tvSurvey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:text="@string/survey_status" />
+
+        <CheckBox
+            android:id="@+id/cbSurveyStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:enabled="false"
+            android:text="@string/survey_taken" />
+
+        <ImageButton
+            android:id="@+id/ibnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:contentDescription="@string/home"
+            android:src="@drawable/homebtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageButton
+            android:id="@+id/ibnSurvey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Snow"
+            android:contentDescription="@string/survey"
+            android:src="@drawable/survey" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bnResetDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Turquoise"
+        android:contentDescription="@string/reset_db"
+        android:text="@string/reset_database"
+        android:textColor="@color/Black" />
+
+    <Switch
+        android:id="@+id/swPrepIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:checked="true"
+        android:text="@string/prep_indicator"
+        android:textOff="Indicator OFF"
+        android:textOn="Indicator ON" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.55" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvLikeUsAt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/like_us_"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tvClickForInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/link_for_further_vocab_materials"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvProfileInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/for_profile_evaluations"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvScoreInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/for_univs_shortlisting"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvExamsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/for_pre_exam_tips"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvVisaInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:text="@string/for_visa_enquiries"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <Button
+                android:id="@+id/bnRandomiser"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:background="@color/Silver"
+                android:gravity="center"
+                android:text="@string/get_your_uid" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:orientation="horizontal" >
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" />
+
+                <TextView
+                    android:id="@+id/tvRandom1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <TextView
+                    android:id="@+id/tvRandom2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <TextView
+                    android:id="@+id/tvRandom3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <TextView
+                    android:id="@+id/tvRandom4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <TextView
+                    android:id="@+id/tvRandom5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <TextView
+                    android:id="@+id/tvRandom6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <TextView
+                    android:id="@+id/tvRandom7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:gravity="center"
+                    android:textColor="@color/CornflowerBlue" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.26" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_weight="0.1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibnRandomise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/randomize"
+            android:src="@drawable/randomcon" />
+
+        <ImageButton
+            android:id="@+id/ibnListIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/wordlist"
+            android:src="@drawable/listicon" />
+
+        <ImageButton
+            android:id="@+id/ibnStatsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/stats"
+            android:src="@drawable/statsicon" />
+
+        <ImageButton
+            android:id="@+id/ibnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+</LinearLayout>

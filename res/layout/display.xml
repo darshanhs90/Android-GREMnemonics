@@ -1,0 +1,303 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlanchedAlmond"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".Display" >
+
+    <RelativeLayout
+        android:id="@+id/rellayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08"
+        android:background="@color/MistyRose"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibnBackward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@color/MistyRose"
+            android:contentDescription="@string/go_backward"
+            android:src="@drawable/backward_select" />
+
+        <ImageButton
+            android:id="@+id/ibnForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@color/MistyRose"
+            android:contentDescription="@string/go_forward"
+            android:src="@drawable/forward_select" />
+
+        <ImageButton
+            android:id="@+id/ibnHomeScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ibnForward"
+            android:layout_toRightOf="@id/ibnBackward"
+            android:background="@color/MistyRose"
+            android:contentDescription="@string/homescreen"
+            android:src="@drawable/homebutton" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/pbStatusIndicator"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="5" />
+
+    <ViewFlipper
+        android:id="@+id/vFToggler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8" >
+
+        <LinearLayout
+            android:id="@+id/llWord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/tvWord"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="@string/word"
+                android:textColor="@color/Black"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="normal|italic"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tvWordName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="@string/word"
+                android:textColor="@color/Black"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="normal|italic"
+                android:typeface="serif" />
+
+            <ImageButton
+                android:id="@+id/ibnClickAnswer"
+                android:layout_width="278dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_weight="0.07"
+                android:contentDescription="@string/go_backward" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/tvMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="@string/meaning_sentence"
+                android:textColor="@color/Black"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="normal|italic"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tvWordMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="@string/word"
+                android:textColor="@color/Black"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="normal|italic"
+                android:typeface="serif" />
+
+            <ImageButton
+                android:id="@+id/ibnClickMnemonic"
+                android:layout_width="278dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_weight="0.07"
+                android:contentDescription="@string/go_backward" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMnemonic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/tvMnemonic"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="@string/mnemonic"
+                android:textColor="@color/Black"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="normal|italic"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tvWordMnemonic"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="@string/word"
+                android:textColor="@color/Black"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="normal|italic"
+                android:typeface="serif" />
+
+            <ImageButton
+                android:id="@+id/ibnClickWord"
+                android:layout_width="278dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_weight="0.07"
+                android:contentDescription="@string/go_backward" />
+        </LinearLayout>
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageButton
+            android:id="@+id/ibnNoIdea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/Red"
+            android:contentDescription="@string/noidea"
+            android:src="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/ibnFair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/OrangeRed"
+            android:contentDescription="@string/fair"
+            android:src="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/ibnGood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/Yellow"
+            android:contentDescription="@string/good"
+            android:src="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/ibnVeryGood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/GreenYellow"
+            android:contentDescription="@string/verygood"
+            android:src="@android:drawable/btn_star" />
+
+        <ImageButton
+            android:id="@+id/ibnExcellent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/Green"
+            android:contentDescription="@string/excellent"
+            android:src="@android:drawable/btn_star" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tvNoIdea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/Red"
+            android:text="@string/no_idea"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvFair"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/OrangeRed"
+            android:text="@string/fair"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/itvGood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/Yellow"
+            android:text="@string/good"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvVeryGood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/GreenYellow"
+            android:text="@string/v_good"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvExcellent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/Green"
+            android:text="@string/excellent"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+</LinearLayout>

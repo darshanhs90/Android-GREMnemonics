@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlanchedAlmond"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".HomeScreen" >
+
+    <ImageButton
+        android:id="@+id/ibnLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.37"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/title" />
+
+    <ProgressBar
+        android:id="@+id/pbStatusIndicator"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
+
+    <ListView
+        android:id="@+id/lvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.55" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageButton
+            android:id="@+id/ibnRandomise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/randomize"
+            android:src="@drawable/randomcon" />
+
+        <ImageButton
+            android:id="@+id/ibnListIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/wordlist"
+            android:src="@drawable/listicon" />
+
+        <ImageButton
+            android:id="@+id/ibnStatsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/stats"
+            android:src="@drawable/statsicon" />
+
+        <ImageButton
+            android:id="@+id/ibnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+</LinearLayout>

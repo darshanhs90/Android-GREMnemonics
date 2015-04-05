@@ -1,0 +1,794 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlanchedAlmond"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".Stats" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal" >
+
+        <TabHost
+            android:id="@+id/thStats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ScrollView
+                        android:id="@+id/tbOrderByList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="100" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="20"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvAllWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/all_words" />
+
+                                <TextView
+                                    android:id="@+id/tvAllWordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvAllWords"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tvAllWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvAllWordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbAllWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="20"
+                                android:max="1000"
+                                android:progress="500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv1to100Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_1_100_words" />
+
+                                <TextView
+                                    android:id="@+id/tv1to100WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv1to100Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv1to100WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv1to100WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb1to100Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv100to200Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_100_200_words" />
+
+                                <TextView
+                                    android:id="@+id/tv100to200WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv100to200Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv100to200WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv100to200WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb100to200Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv200to300Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_200_300_words" />
+
+                                <TextView
+                                    android:id="@+id/tv200to300WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv200to300Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv200to300WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv200to300WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb200to300Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv300to400Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_300_400_words" />
+
+                                <TextView
+                                    android:id="@+id/tv300to400WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv300to400Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv300to400WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv300to400WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb300to400Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv400to500Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_400_500_words" />
+
+                                <TextView
+                                    android:id="@+id/tv400to500WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv400to500Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv400to500WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv400to500WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb400to500Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv500to600Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_500_600_words" />
+
+                                <TextView
+                                    android:id="@+id/tv500to600WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv500to600Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv500to600WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv500to600WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb500to600Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv600to700Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_600_700_words" />
+
+                                <TextView
+                                    android:id="@+id/tv600to700WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv600to700Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv600to700WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv600to700WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb600to700Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv700to800Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_700_800_words" />
+
+                                <TextView
+                                    android:id="@+id/tv700to800WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv700to800Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv700to800WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv700to800WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb700to800Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv800to900Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_800to900_words" />
+
+                                <TextView
+                                    android:id="@+id/tv800to900WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv800to900Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv800to900WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv800to900WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb800to900Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv900to1000Words"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/_900_1000_words" />
+
+                                <TextView
+                                    android:id="@+id/tv900to1000WordsViewed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tv900to1000Words"
+                                    android:text="@string/_viewed_" />
+
+                                <TextView
+                                    android:id="@+id/tv900to1000WordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tv900to1000WordsViewed"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb900to1000Words"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10"
+                                android:max="100"
+                                android:progress="50" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <ScrollView
+                        android:id="@+id/tbOrderByStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="1" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Aquamarine"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvNonViewedWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/all_words" />
+
+                                <TextView
+                                    android:id="@+id/tvNonViewedWordsCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvNonViewedWords"
+                                    android:text="@string/_count_" />
+
+                                <TextView
+                                    android:id="@+id/tvNonviewedWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvNonViewedWordsCountText"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbNonViewedWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Beige"
+                                android:layerType="software"
+                                android:max="1000"
+                                android:progress="500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Red"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvRedViewedWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/words_no_idea" />
+
+                                <TextView
+                                    android:id="@+id/tvRedViewedWordsCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvRedViewedWords"
+                                    android:text="@string/_count_" />
+
+                                <TextView
+                                    android:id="@+id/tvRedviewedWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvRedViewedWordsCountText"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbRedWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Red"
+                                android:max="1000"
+                                android:progress="500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/OrangeRed"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvOrangeRedViewedWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/words_fair" />
+
+                                <TextView
+                                    android:id="@+id/tvOrangeRedViewedWordsCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvOrangeRedViewedWords"
+                                    android:text="@string/_count_" />
+
+                                <TextView
+                                    android:id="@+id/tvOrangeRedViewedWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvOrangeRedViewedWordsCountText"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbOrangeRedWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/OrangeRed"
+                                android:max="1000"
+                                android:progress="500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Yellow"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvYellowViewedWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/words_good" />
+
+                                <TextView
+                                    android:id="@+id/tvYellowViewedWordsCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvYellowViewedWords"
+                                    android:text="@string/_count_" />
+
+                                <TextView
+                                    android:id="@+id/tvYellowViewedWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvYellowViewedWordsCountText"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbYellowWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Yellow"
+                                android:max="1000"
+                                android:progress="500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/GreenYellow"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvLightGreenViewedWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/GreenYellow"
+                                    android:text="@string/words_very_good" />
+
+                                <TextView
+                                    android:id="@+id/tvLightGreenViewedWordsCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvLightGreenViewedWords"
+                                    android:text="@string/_count_" />
+
+                                <TextView
+                                    android:id="@+id/tvLightGreenViewedWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvLightGreenViewedWordsCountText"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbLightGreenWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/YellowGreen"
+                                android:max="1000"
+                                android:progress="500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Green"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tvGreenViewedWords"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/words_excellent" />
+
+                                <TextView
+                                    android:id="@+id/tvGreenViewedWordsCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@id/tvGreenViewedWords"
+                                    android:text="@string/_count_" />
+
+                                <TextView
+                                    android:id="@+id/tvGreenViewedWordsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/tvGreenViewedWordsCountText"
+                                    android:gravity="center|left" />
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbGreenWords"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.1"
+                                android:background="@color/Green"
+                                android:max="1000"
+                                android:progress="500" />
+                        </LinearLayout>
+                    </ScrollView>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibnReset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="@color/Beige"
+            android:contentDescription="@string/reset"
+            android:src="@drawable/reset_icon" />
+         <ImageButton
+            android:id="@+id/ibnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@color/Beige"
+            android:contentDescription="@string/home"
+            android:src="@drawable/homebtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibnRandomise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/randomize"
+            android:src="@drawable/randomcon" />
+
+        <ImageButton
+            android:id="@+id/ibnListIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/wordlist"
+            android:src="@drawable/listicon" />
+
+        <ImageButton
+            android:id="@+id/ibnStatsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/stats"
+            android:src="@drawable/statsicon" />
+
+        <ImageButton
+            android:id="@+id/ibnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/Aquamarine"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+</LinearLayout>
